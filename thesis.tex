@@ -1,74 +1,64 @@
 %% ----------------------------------------------------------------
-%% MiniThesis.tex
+%% thesis.tex
 %% ---------------------------------------------------------------- 
-\documentclass{ecsthesis}   % Use the progress Style
-\graphicspath{{./figures/}}    % Location of your graphics files
+\documentclass[a4paper]{phdthesis}
+
 \usepackage[round]{natbib}            % Use Natbib style for the refs.
 \usepackage[binary-units=true]{siunitx}
-\usepackage{pgfgantt}
-\usepackage{rotating}
-\usepackage{verbatim}
-\usepackage{tikz}
-\usepackage{listings}
 \usepackage{fixltx2e}
-\usepackage{textgreek}
 
 \hypersetup{colorlinks=true}   % Set to false for black/white printing
-
-\sisetup{range-phrase=--}
-\sisetup{range-units=single}
-
-\DeclareSIUnit\Molar{M}
-\DeclareSIUnit\cell{cell}
-\DeclareSIUnit\neuron{neuron}
-\DeclareSIUnit\microglia{microglia}
-
-\usetikzlibrary{arrows}
+\graphicspath{{.}}    % Location of your graphics files
 
 \renewcommand{\bibname}{References}
 
-\input{definitions}
-\input{lstdefinitions}
 %% ----------------------------------------------------------------
 \begin{document}
 \frontmatter
-\title      {Prediction of Perivascular Drainage of \Ab from the Brain Using Computational Modelling: Implications for Alzheimer's Disease}
-\authors    {Alexandra Katharina Diem}
-\addresses  {\groupname\\\deptname\\\univname}
+\title      {Thesis Title}
 \date       {November 2016}
-\subject    {}
-\keywords   {}
-\supervisor {Prof. Neil W. Bressloff, Dr. Giles Richardson, Dr. Roxana O. Carare}
+\author     {Author Names}
+\supervisor {Prof. XYZ}
+\university {University of Southampton}
+\department {Computational Engineering and Design}
+\group      {Computational Engineering and Design Group}
+\faculty    {Faculty of Engineering and the Environment}
+
 \maketitle
+
 \begin{abstract}
-Alzheimer's Disease (AD) is the most common form of dementia and although it has been researched for over 100 years, to date, there is still no cure or preventive medication. Its onset and progression is closely related to the accumulation of the neuronal metabolite \Ab, raising the question of how metabolites and waste products are eliminated from the brain normally. The brain does not have conventional lymphatic vessels, which are found in other parts of the body and, therefore, has to eliminate metabolites differently. In recent years a connection between the pathology of AD and cerebrovascular diseases has been suggested and confirmed in various mice studies and this has led to the hypothesis that interstitial fluid in the basement membranes in the walls of cerebral arteries provide the pathways for perivascular drainage of \Ab with arterial pulsations as the pumping mechanism. However, perivascular drainage occurs along basement membranes towards the surface of the brain, which can not be explained solely by arterial pulsations. The aim of this thesis was to develop a coupled computational and mathematical model of perivascular drainage in the brain in order to investigate possible mechanisms for fluid drainage from the brain. In this thesis the results of coupling a computational model of a short arterial segment with a mathematical model of the perivascular space are presented. They demonstrate that the model is capable of producing net drainage of interstitial fluid in the reverse direction of the blood flow by introducing a valve mechanism. However, they also show that arterial pulsations are not strong enough to provide the driving force for perivascular drainage. This result negates one of the most cited hypotheses on perivascular drainage. Following these results the development of a network model of the brain takes a more global perspective on fluid dynamics through the brain and demonstrates the feasibility of simulating the dynamic responses of cells and the vasculature. This approach lays the foundations for a multiscale model of \Ab distribution, flow and drainage in the brain and an in silico framework for exploring related pathophysiology and therapy.
+Abstract goes here.
 \end{abstract}
 
 \tableofcontents
 \listoffigures
 \listoftables
 \lstlistoflistings
-\include{listofsymbols}
-\include{listofacronyms}
-\include{authordeclaration}
-\include{acknowledgements}
+\listofsymbols{llc}{
+$a$ & description & unit\\
+$b$ & description & unit\\
+$c$ & description & unit}
+\listofacronyms{ll}{
+ACR & acronym\\
+ACR & acronym\\
+ACR & acronym}
+\declaration{Author et al. 2017}
+\acknowledgements{Thanks to no one.}
 \mainmatter
 %% ----------------------------------------------------------------
-\include{introduction} % finished
-\include{perivascular} % finished
-\include{diffusionpaper} % finished
-\include{numerical}
-\include{analytical} % finished
-\include{coupling}
-\include{network}
-\include{discussion}
+\chapter{A Chapter}
+The text for a chapter goes here.
+
+\chapter{Another Chapter}
+The text for another chapter goes here.
+
 \appendix
-\include{bmanalysis}
-\include{publications}
-\include{glossary}
+\chapter{Appendix}
+The text for an appendix goes here.
+
 %% ----------------------------------------------------------------
 \backmatter
-\bibliographystyle{plainnat}
-\bibliography{thesis}
+%\bibliographystyle{plainnat}
+%\bibliography{thesis}
 \end{document}
 %% ----------------------------------------------------------------
