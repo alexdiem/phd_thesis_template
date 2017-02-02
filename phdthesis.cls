@@ -36,6 +36,7 @@
   January\or February\or March\or April\or May\or June\or
   July\or August\or September\or October\or November\or December\fi
   \space \number\year}
+\usepackage{graphicx}
 \usepackage{setspace}
 \onehalfspacing
 \setlength{\parindent}{0pt}
@@ -81,7 +82,7 @@
 \newtheorem{definition}[theorem]{Definition}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
-\usepackage[centerlast,small,sc]{caption2}
+\usepackage[centerlast,small,sc]{caption}
 \setlength{\captionmargin}{20pt}
 \newcommand{\fref}[1]{Figure~\ref{#1}}
 \newcommand{\tref}[1]{Table~\ref{#1}}
@@ -100,13 +101,7 @@
 \setcounter{bottomnumber}{9}
 \setcounter{totalnumber}{20}
 \setcounter{dbltopnumber}{9}
-\usepackage{graphicx}
-\usepackage{epstopdf}
-\usepackage[scriptsize]{subfigure}
-\usepackage{booktabs}
-\usepackage{rotating}
 \usepackage{listings}
-\usepackage{xspace}
 \lstset{captionpos=b,
         frame=tb,
         basicstyle=\scriptsize\ttfamily,
@@ -124,6 +119,7 @@
 \pdfstringdefDisableCommands{
    \let\\\space
 }
+
 \newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
 \newcommand*{\university}[1]{\gdef\@university{#1}}
 \newcommand*{\UNIVERSITY}{\MakeUppercase\@university}
