@@ -1,0 +1,5 @@
+*.aux
+*.lo*
+*.out
+*.toc
+*.pdf
