@@ -1,15 +1,37 @@
 %% ----------------------------------------------------------------
 %% thesis.tex
-%% ---------------------------------------------------------------- 
+%% ----------------------------------------------------------------
 \documentclass[a4paper]{phdthesis}
 
-\usepackage[round]{natbib}            % Use Natbib style for the refs.
+% \usepackage[round]{natbib}            % Use Natbib style for the refs.
 %\usepackage{fixltx2e}
 %\usepackage{epstopdf}
 %\usepackage{booktabs}
 %\usepackage{rotating}
 %\usepackage{xspace}
 
+% included for correct dating (i.e day/month/year) in bibtex
+\usepackage[british]{babel}
+
+\usepackage[
+  backend=bibtex,
+  firstinits=true, % render first and middle names as initials
+  useprefix=true,
+  uniquename=init,
+  maxcitenames=3,
+  maxbibnames=99,
+  style=authoryear,
+  dashed=true, % re-print recurring author names in bibliography
+  url=true,
+  doi=true,
+  eprint=true
+]{biblatex}
+
+% requirement for biblatex
+\usepackage{csquotes}
+
+% add bibliography
+\bibliography{references}
 
 \hypersetup{colorlinks=true}   % Set to false for black/white printing
 \graphicspath{{.}}    % Location of your graphics files
@@ -47,7 +69,7 @@ ACR & acronym\\
 ACR & acronym\\
 ACR & acronym}
 \declaration{Author et al. 2017}
-\acknowledgements{Thanks to no one.}
+\acknowledgements{Thanks to no one. But perhaps a little credit goes to \textcite{template}...}
 \mainmatter
 %% ----------------------------------------------------------------
 \chapter{A Chapter}
@@ -62,6 +84,9 @@ The text for an appendix goes here.
 
 %% ----------------------------------------------------------------
 \backmatter
+
+\printbibliography
+
 %\bibliographystyle{plainnat}
 %\bibliography{thesis}
 \end{document}
