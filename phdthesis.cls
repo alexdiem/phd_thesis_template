@@ -355,22 +355,22 @@ Date:
 {\normalsize #1}
 \cleardoublepage
 }
-%\newcommand\dedicatory[1]{
-%\btypeout{Dedicatory}
-%\thispagestyle{plain}
-%\null\vfil
-%\vskip 60\p@
-%\begin{center}{\Large \sl #1}\end{center}
-%\vfil\null
-%\cleardoublepage
-%}
-%\renewcommand\backmatter{
-%  \if@openright
-%    \cleardoublepage
-%  \else
-%    \clearpage
-%  \fi
-%  \addtotoc{\bibname}
-%  \btypeout{\bibname}
-%  \@mainmatterfalse}
-%\endinput
+\newcommand\dedicatory[1]{
+\btypeout{Dedicatory}
+\thispagestyle{plain}
+\null\vfil
+\vskip 60\p@
+\begin{center}{\normalsize \sl #1}\end{center}
+\vfil\null
+\cleardoublepage
+}
+\renewcommand\backmatter{
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \addtotoc{\bibname}
+  \btypeout{\bibname}
+  \@mainmatterfalse}
+\endinput
