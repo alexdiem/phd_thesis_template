@@ -374,5 +374,3 @@ Date:
 %  \btypeout{\bibname}
 %  \@mainmatterfalse}
 %\endinput
-%%
-%% End of file `ecsthesis.cls'.
