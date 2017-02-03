@@ -318,7 +318,7 @@
       \@mkboth{
           \MakeUppercase\declarationname}{\MakeUppercase\declarationname}}
 \thispagestyle{plain}
-\null\vfill
+\null
 \vskip 60\p@
 \begin{center}{\Large\bf \declarationname \par}\end{center}
 {\normalsize 
@@ -351,7 +351,7 @@ Date:
       \@mkboth{
           \MakeUppercase\acknowledgementsname}{\MakeUppercase\acknowledgementsname}}
 \thispagestyle{plain}
-\null\vfill
+\null
 \vskip 60\p@
 \begin{center}{\Large\bf \acknowledgementsname \par}\end{center}
 {\normalsize #1}
