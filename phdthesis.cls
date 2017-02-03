@@ -197,7 +197,7 @@
     \bigskip
     {\normalsize \underline{Doctor of Philosophy}\par \par}
     \bigskip
-    {\normalsize\bf \@title \par \par}
+    {\normalsize\bf\MakeUppercase \@title \par \par}
     \medskip
     {\normalsize by \@author \par \par}
     \bigskip
