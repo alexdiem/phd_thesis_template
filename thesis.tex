@@ -11,6 +11,8 @@
 
 \renewcommand{\bibname}{References}
 
+\input{lstdefinitions}
+
 %% ----------------------------------------------------------------
 \begin{document}
 \frontmatter
@@ -70,6 +72,24 @@ It also references \tref{tab:1}.
 
 \chapter{Another Chapter}
 The text for another chapter goes here.
+
+\begin{figure}
+  \begin{algorithm}[caption={An algorithm caption.}, label=alg:1]
+    i = 0
+    while True:
+      i += 1
+  \end{algorithm}
+\end{figure}
+
+It references \aref{alg:1}.
+
+You can also write inline code using
+
+\begin{python}
+i = 0
+while True:
+  i += 1
+\end{python}
 
 \appendix
 \chapter{Appendix}

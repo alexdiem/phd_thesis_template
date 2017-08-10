@@ -1,0 +1,63 @@
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{10} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{10}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\footnotesize,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\bfseries\color{black},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}}
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{\text{#1}}
+
+
+% Algorithm style for highlighting
+\newcommand\algstyle{\lstset{
+language=Python,
+basicstyle=\footnotesize,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\bfseries\color{black},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\color{black},    % Custom highlighting style
+stringstyle=\color{black},
+frame=tb,                         % Any extra options here
+showstringspaces=false,            % 
+captionpos=t
+}}
+
+
+% Algorithm environment
+\lstnewenvironment{algorithm}[1][]
+{
+\algstyle
+\lstset{#1}
+}
+{}
